@@ -1,10 +1,10 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Account {
 	
-	private int accountNo;
-	private String accountType;
-	private Date openingDate;
+	private long accountNo;
+	private AccountType accountType;
+	private LocalDate openingDate;
 	private double openingBalance;
 	
 	
@@ -19,7 +19,7 @@ public class Account {
 
 
 
-	public int getAccountNo() {
+	public long getAccountNo() {
 		return accountNo;
 	}
 
@@ -27,7 +27,7 @@ public class Account {
 
 
 
-	public void setAccountNo(int accountNo) {
+	public void setAccountNo(long accountNo) {
 		this.accountNo = accountNo;
 	}
 
@@ -35,7 +35,7 @@ public class Account {
 
 
 
-	public String getAccountType() {
+	public AccountType getAccountType() {
 		return accountType;
 	}
 
@@ -43,7 +43,7 @@ public class Account {
 
 
 
-	public void setAccountType(String accountType) {
+	public void setAccountType(AccountType accountType) {
 		this.accountType = accountType;
 	}
 
@@ -51,7 +51,7 @@ public class Account {
 
 
 
-	public Date getOpeningDate() {
+	public LocalDate getOpeningDate() {
 		return openingDate;
 	}
 
@@ -59,7 +59,7 @@ public class Account {
 
 
 
-	public void setOpeningDate(Date openingDate) {
+	public void setOpeningDate(LocalDate openingDate) {
 		this.openingDate = openingDate;
 	}
 
@@ -76,6 +76,28 @@ public class Account {
 
 
 	public void setOpeningBalance(double openingBalance) {
+		this.openingBalance = openingBalance;
+	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Account [accountNo=" + accountNo + ", accountType=" + accountType + ", openingDate=" + openingDate
+				+ ", openingBalance=" + openingBalance + "]";
+	}
+
+
+
+
+
+	public Account(long accountNo, AccountType savings, LocalDate openingDate, double openingBalance) {
+		super();
+		this.accountNo = accountNo;
+		this.accountType = savings;
+		this.openingDate = openingDate;
 		this.openingBalance = openingBalance;
 	}
 

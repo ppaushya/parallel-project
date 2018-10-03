@@ -1,31 +1,45 @@
 
 public class Address {
 	
-	private String StNo;
+	private String StName;
 	private String address;
 	private String city;
 	private String state;
 	
 	
 
+	@Override
+	public String toString() {
+		return "Address [StName=" + StName + ", address=" + address + ", city=" + city + ", state=" + state + "]";
+	}
+
+
+
+	public Address(String stName, String address, String city, String state) {
+		super();
+		StName = stName;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+	}
+
+
+
 	public Address() {
 		super();
 	}
 
-	
 
 
-	public String getStNo() {
-		return StNo;
+	public String getStName() {
+		return StName;
 	}
 
 
 
-
-	public void setStNo(String stNo) {
-		StNo = stNo;
+	public void setStName(String stName) {
+		StName = stName;
 	}
-
 
 
 

@@ -1,11 +1,15 @@
+import java.util.Arrays;
 
 public class Customer {
 	
 	private int customerId;
 	private String name;
 	private Address address;
-	private Account account[];
+	private Account[] account;
 	private String mobileNo;
+	private String emailId;
+	
+	
 	public String getMobileNo() {
 		return mobileNo;
 	}
@@ -30,12 +34,32 @@ public class Customer {
 
 
 
-	private String emailId;
+	
 
 	
 	
 	public Customer() {
 		super();
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", name=" + name + ", address=" + address + ", account="
+				+ Arrays.toString(account) + ", mobileNo=" + mobileNo + ", emailId=" + emailId + "]";
+	}
+
+
+
+	public Customer(int customerId, String name, Address address, Account[] account, String mobileNo, String emailId) {
+		super();
+		this.customerId = customerId;
+		this.name = name;
+		this.address = address;
+		this.account = account;
+		this.mobileNo = mobileNo;
+		this.emailId = emailId;
 	}
 
 
